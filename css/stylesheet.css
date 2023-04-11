@@ -1,3 +1,7 @@
+* {
+    box-sizing: border-box;
+}
+
 .outer {
 
     display: flex;
@@ -76,12 +80,6 @@ a:hover {
     justify-content: space-around;
 }
 
-.grid {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
-    font-size: larger;
-}
-
 #menu {
     color: black;
 }
@@ -99,47 +97,100 @@ a:hover {
     max-width: auto;
     border-radius: 30px;
     border-style: solid;
-    border-color: rgb(178, 203, 32);
+    border-color: #585858;
+}
+
+section {
+    background-color: rgb(234, 231, 231);
+    margin: 2rem 6rem;
+    padding: 2rem 1rem 1rem 1rem;
+    border-style: solid;
+    border-radius: 12px;
+    border-color: #585858;
+}
+
+#about {
+    background-color: rgb(225, 220, 201);
+}
+
+.flex-container {
+    display: flex;
+    flex-direction: row;
+    font-size: 30px;
+    text-align: center;
+
+}
+
+.flex-item-java {
+    background-color: #f1f1f1;
+    padding: 10px;
+    flex: 50%;
+}
+
+.flex-item-php {
+    background-color: dodgerblue;
+    padding: 10px;
+    flex: 50%;
+}
+
+.flex-item-css {
+    background-color: #f1f1f1;
+    padding: 10px;
+    flex: 50%;
+}
+.flex-item-sqp{
+    background-color: dodgerblue;
+    padding: 10px;
+    flex: 50%;
 }
 
 
 
+    /*------------------------Mobile Size MediaQuery---------------------------------------*/
 
-/*------------------------Mobile Size MediaQuery---------------------------------------*/
-
-@media only screen and (max-width: 767px) {
+    @media only screen and (max-width: 767px) {
 
 
-    .btn {
-        flex: 0;
-        padding-top: 12%;
+        .btn {
+            flex: 0;
+            padding-top: 12%;
+        }
+
+        .topnav a {
+            font-size: small;
+        }
+
+        h1 {
+            font-size: 25px;
+        }
+
+        h2 {
+            font-size: large;
+        }
+
+        #banner {
+            height: 30vh;
+            font-size: small;
+        }
     }
 
-    .topnav a {
-        font-size: small;
+    /*---------------------------Tablet Size MediaQuery-----------------------------------------------------------------------*/
+
+    @media screen and (min-width: 768px) and (max-width: 1024px) {
+
+        .grid {
+            display: grid;
+            grid-template-columns: auto auto;
+            font-size: larger;
+        }
     }
 
-    h1 {
-        font-size: 25px;
+    /*------------------------------Laptop Size MediaQuery---------------------------------------------------------------------*/
+
+    @media only screen and (min-width: 1025px) {
+        .grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr 1fr;
+            font-size: larger;
+        }
     }
-
-    h2 {
-        font-size: large;
-    }
-
-    #banner {
-        height: 30vh;
-        font-size: small;
-    }
-}
-
-/*---------------------------Tablet Size MediaQuery-----------------------------------------------------------------------*/
-
-@media screen and (min-width: 768px) and (max-width: 1024px) {
-
-    .grid {
-        display: grid;
-        grid-template-columns: auto auto;
-        font-size: larger;
-    }
-}
