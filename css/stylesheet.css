@@ -85,18 +85,22 @@ a:hover {
 #menu {
     color: black;
 }
+
 .header {
-    text-align: center;}
+    text-align: center;
+}
+
+.note {
+    padding: 0% 3% 1% 3%;
+}
 
 .img1 img {
     max-height: 30vh;
     max-width: auto;
     border-radius: 30px;
     border-style: solid;
-    border-color: rgb(178, 203, 32)
-    
+    border-color: rgb(178, 203, 32);
 }
-
 
 
 
@@ -110,19 +114,23 @@ a:hover {
         flex: 0;
         padding-top: 12%;
     }
+
     .topnav a {
         font-size: small;
     }
+
     h1 {
         font-size: 25px;
     }
 
-    h2{
+    h2 {
         font-size: large;
     }
+
     #banner {
         height: 30vh;
         font-size: small;
+    }
 }
 
 /*---------------------------Tablet Size MediaQuery-----------------------------------------------------------------------*/
