@@ -2,7 +2,7 @@
 
     display: flex;
     background-color: rgb(169, 208, 208);
-    color: rgb(61, 78, 155);
+    color: rgb(114, 41, 198);
     font-size: larger;
 }
 
@@ -29,7 +29,7 @@ a:hover {
 
 .banner1 {
     /* font-family: 'Arial', sans-serif; */
-    text-align:center;
+    text-align: center;
     padding-top: 10%;
     padding-left: 5%;
     padding-right: 5%;
@@ -56,18 +56,45 @@ a:hover {
     background-color: whitesmoke;
     color: rgb(0, 0, 0);
 }
-.topnav > a {
-    font-size: 25px;
-    padding-left: 2%;
-    padding-right: 2%;
+
+.topnav>a {
+    padding: 8px 8px;
+    font-size: 20px;
+    color: white;
+    /* padding-left: 2%;
+    padding-right: 2%; */
 }
-.grid{
-    display:grid;
+
+.topnav {
+    display: flex;
+
+    position: sticky;
+    top: 0;
+
+    background-color: rgb(34, 42, 53);
+
+    justify-content: space-around;
+}
+
+.grid {
+    display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
     font-size: larger;
 }
-#menu{
+
+#menu {
     color: black;
+}
+.header {
+    text-align: center;}
+
+.img1 img {
+    max-height: 30vh;
+    max-width: auto;
+    border-radius: 30px;
+    border-style: solid;
+    border-color: rgb(178, 203, 32)
+    
 }
 
 
@@ -83,14 +110,27 @@ a:hover {
         flex: 0;
         padding-top: 12%;
     }
+    .topnav a {
+        font-size: small;
+    }
+    h1 {
+        font-size: 25px;
+    }
+
+    h2{
+        font-size: large;
+    }
+    #banner {
+        height: 30vh;
+        font-size: small;
 }
 
 /*---------------------------Tablet Size MediaQuery-----------------------------------------------------------------------*/
 
 @media screen and (min-width: 768px) and (max-width: 1024px) {
 
-    .grid{
-        display:grid;
+    .grid {
+        display: grid;
         grid-template-columns: auto auto;
         font-size: larger;
     }
