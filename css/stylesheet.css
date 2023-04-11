@@ -115,7 +115,7 @@ section {
 
 .flex-container {
     display: flex;
-    flex-direction: row;
+    flex-wrap:wrap;
     font-size: 30px;
     text-align: center;
 
@@ -134,14 +134,28 @@ section {
 }
 
 .flex-item-css {
-    background-color: #f1f1f1;
+    background-color: #d45353;
     padding: 10px;
     flex: 50%;
 }
 .flex-item-sqp{
-    background-color: dodgerblue;
+    background-color: rgb(31, 240, 132);
     padding: 10px;
     flex: 50%;
+}
+.top {
+    --offset: 50px;
+    position: sticky;
+    bottom: 80px;
+    margin-left: 90%;
+    place-self: end;
+    margin-top: calc(100vh + var(--offset));
+    text-decoration: none;
+    padding: 12px;
+    color: #fff;
+    background: rgb(6, 156, 194);
+    border-radius: 15px;
+    white-space: nowrap;
 }
 
 
@@ -172,6 +186,9 @@ section {
             height: 30vh;
             font-size: small;
         }
+        .flex-item-php, .flex-item-spl, .flex-item-css, .flex-item-java {
+            flex: 100%;
+          }
     }
 
     /*---------------------------Tablet Size MediaQuery-----------------------------------------------------------------------*/
