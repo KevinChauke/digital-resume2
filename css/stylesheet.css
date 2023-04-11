@@ -115,7 +115,7 @@ section {
 
 .flex-container {
     display: flex;
-    flex-wrap:wrap;
+    flex-wrap: wrap;
     font-size: 30px;
     text-align: center;
 
@@ -138,11 +138,153 @@ section {
     padding: 10px;
     flex: 50%;
 }
-.flex-item-sqp{
+
+.flex-item-sqp {
     background-color: rgb(31, 240, 132);
     padding: 10px;
     flex: 50%;
 }
+
+.flex-item-html {
+    background-color: rgb(40, 94, 66);
+    padding: 10px;
+    flex: 50%;
+}
+
+/* -----------------------------------------------Bar Graph----------------------------------------- */
+
+.graph {
+    margin-bottom: 1em;
+    font: normal 100%/150% arial, helvetica, sans-serif;
+}
+
+.graph tbody th {
+    text-align: right;
+}
+
+@supports (display:grid) {
+
+    @media (min-width:32em) {
+
+        .graph {
+            display: block;
+            width: 600px;
+            height: 300px;
+        }
+
+        .graph caption {
+            display: block;
+        }
+
+        .graph thead {
+            display: none;
+        }
+
+        .graph tbody {
+            position: relative;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(2em, 1fr));
+            column-gap: 2.5%;
+            align-items: end;
+            height: 100%;
+            margin: 3em 0 1em 2.8em;
+            padding: 0 1em;
+            border-bottom: 2px solid rgba(0, 0, 0, 0.5);
+            background: repeating-linear-gradient(180deg,
+                    rgba(170, 170, 170, 0.7) 0,
+                    rgba(170, 170, 170, 0.7) 1px,
+                    transparent 1px,
+                    transparent 20%);
+        }
+
+        .graph tbody:before,
+        .graph tbody:after {
+            position: absolute;
+            left: -3.2em;
+            width: 2.8em;
+            text-align: right;
+            font: bold 80%/120% arial, helvetica, sans-serif;
+        }
+
+        .graph tbody:before {
+            content: "100%";
+            top: -0.6em;
+        }
+
+        .graph tbody:after {
+            content: "0%";
+            bottom: -0.6em;
+        }
+
+        .graph tr {
+            position: relative;
+            display: block;
+        }
+
+        .graph tr:hover {
+            z-index: 999;
+        }
+
+        .graph th,
+        .graph td {
+            display: block;
+            text-align: center;
+        }
+
+        .graph tbody th {
+            position: absolute;
+            top: -3em;
+            left: 0;
+            width: 100%;
+            font-weight: normal;
+            text-align: center;
+            white-space: nowrap;
+            text-indent: 0;
+            transform: rotate(-45deg);
+        }
+
+        .graph tbody th:after {
+            content: "";
+        }
+
+        .graph td {
+            width: 100%;
+            height: 100%;
+            background: #F63;
+            border-radius: 0.5em 0.5em 0 0;
+            transition: background 0.5s;
+        }
+
+        .graph tr:hover td {
+            opacity: 0.7;
+        }
+
+        .graph td span {
+            overflow: hidden;
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            width: 0;
+            padding: 0.5em 0;
+            margin: -1em 0 0;
+            font: normal 85%/120% arial, helvetica, sans-serif;
+            font-weight: bold;
+            opacity: 0;
+            transition: opacity 0.5s;
+            color: white;
+        }
+
+        .toggleGraph:checked+table td span,
+        .graph tr:hover td span {
+            width: 4em;
+            margin-left: -2em;
+            opacity: 1;
+        }
+    }
+
+}
+
+/* ------------------------------------------- Back To Top Button--------------------------------- */
 .top {
     --offset: 50px;
     position: sticky;
@@ -157,8 +299,9 @@ section {
     border-radius: 15px;
     white-space: nowrap;
 }
+
 /* -------------------------------Contacs-------------------------------- */
-.contact1{
+.contact1 {
     padding: 2rem 1rem 1rem 1rem;
     background-color: rgb(234, 231, 231);
     display: grid;
@@ -169,6 +312,7 @@ section {
     border-color: #585858;
     font-size: larger;
 }
+
 /* -------------------------------form--------------------------------------- */
 form {
     height: 100%;
@@ -178,10 +322,12 @@ form {
     background-color: #31286f16;
     padding: 30px;
 }
+
 h3 {
     text-align: center;
     margin: 35px 0 20px 0 !important;
 }
+
 input[type=submit] {
     width: 100%;
     background-color: #4CAF50;
@@ -211,65 +357,71 @@ input[type=submit]:hover {
     border-radius: 5px;
 
 }
-footer{
+
+footer {
     background-image: url('../images/question-mark.JPEG');
     background-position: center center;
     background-repeat: no-repeat;
-	-webkit-background-size: cover;
-    background-size:contain;
-    
+    -webkit-background-size: cover;
+    background-size: contain;
+
 }
 
 
 
-    /*------------------------Mobile Size MediaQuery---------------------------------------*/
+/*------------------------Mobile Size MediaQuery---------------------------------------*/
 
-    @media only screen and (max-width: 767px) {
+@media only screen and (max-width: 767px) {
 
 
-        .btn {
-            flex: 0;
-            padding-top: 12%;
-        }
-
-        .topnav a {
-            font-size: small;
-        }
-
-        h1 {
-            font-size: 25px;
-        }
-
-        h2 {
-            font-size: large;
-        }
-
-        #banner {
-            height: 30vh;
-            font-size: small;
-        }
-        .flex-item-php, .flex-item-spl, .flex-item-css, .flex-item-java {
-            flex: 100%;
-          }
+    .btn {
+        flex: 0;
+        padding-top: 12%;
     }
 
-    /*---------------------------Tablet Size MediaQuery-----------------------------------------------------------------------*/
-
-    @media screen and (min-width: 768px) and (max-width: 1024px) {
-
-        .grid {
-            display: grid;
-            grid-template-columns: auto auto;
-            font-size: larger;
-        }
+    .topnav a {
+        font-size: small;
     }
 
-    /*------------------------------Laptop Size MediaQuery---------------------------------------------------------------------*/
-
-    @media only screen and (min-width: 1025px) {
-        .grid {
-            display: grid;
-            grid-template-columns: 1fr 1fr 1fr 1fr;
-            font-size: larger;
-        }
+    h1 {
+        font-size: 25px;
     }
+
+    h2 {
+        font-size: large;
+    }
+
+    #banner {
+        height: 30vh;
+        font-size: small;
+    }
+
+    .flex-item-php,
+    .flex-item-spl,
+    .flex-item-css,
+    .flex-item-java,
+    .flex-item-html {
+        flex: 100%;
+    }
+}
+
+/*---------------------------Tablet Size MediaQuery-----------------------------------------------------------------------*/
+
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+
+    .grid {
+        display: grid;
+        grid-template-columns: auto auto;
+        font-size: larger;
+    }
+}
+
+/*------------------------------Laptop Size MediaQuery---------------------------------------------------------------------*/
+
+@media only screen and (min-width: 1025px) {
+    .grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        font-size: larger;
+    }
+}
