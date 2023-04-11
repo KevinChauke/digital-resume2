@@ -2,7 +2,7 @@
 
     display: flex;
     background-color: rgb(169, 208, 208);
-    color: whitesmoke;
+    color: rgb(61, 78, 155);
     font-size: larger;
 }
 
@@ -17,24 +17,23 @@
 a:link {
     border-radius: 7px;
     text-decoration: none;
-    color: rgb(230, 230, 230);
+    color: rgb(54, 71, 118);
 }
 
 a:hover {
-    transition-duration: 500ms;
+    transition-duration: 1000ms;
     text-decoration: none;
     background-color: whitesmoke;
-    color: black;
+    color: rgb(115, 255, 0);
 }
 
 .banner1 {
-    font-family: 'Arial', sans-serif;
-    text-align: center;
-
-    padding-top: 12%;
+    /* font-family: 'Arial', sans-serif; */
+    text-align:center;
+    padding-top: 10%;
     padding-left: 5%;
     padding-right: 5%;
-    flex: 2;
+    flex: 1;
 }
 
 .btn {
@@ -55,9 +54,21 @@ a:hover {
 .button:hover {
     transition-duration: 1000ms;
     background-color: whitesmoke;
+    color: rgb(0, 0, 0);
+}
+.topnav > a {
+    font-size: 25px;
+    padding-left: 2%;
+    padding-right: 2%;
+}
+.grid{
+    display:grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    font-size: larger;
+}
+#menu{
     color: black;
 }
-
 
 
 
@@ -71,5 +82,16 @@ a:hover {
     .btn {
         flex: 0;
         padding-top: 12%;
+    }
+}
+
+/*---------------------------Tablet Size MediaQuery-----------------------------------------------------------------------*/
+
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+
+    .grid{
+        display:grid;
+        grid-template-columns: auto auto;
+        font-size: larger;
     }
 }
