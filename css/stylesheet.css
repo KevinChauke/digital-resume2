@@ -395,6 +395,7 @@ footer {
 
 @media only screen and (max-width: 767px) {
 
+    
 
     .btn {
         flex: 0;
@@ -469,6 +470,9 @@ footer {
 /*--------------------------------------------Tablet Size MediaQuery---------------------------------------------------------------*/
 
 @media screen and (min-width: 768px) and (max-width: 1024px) {
+    #banner{
+        height: 71vh;
+    }
 
     .grid {
         display: grid;
@@ -480,6 +484,9 @@ footer {
 /*---------------------------------------------Laptop Size MediaQuery-----------------------------------------------------------------*/
 
 @media only screen and (min-width: 1025px) {
+    #banner{
+        height: 84vh;
+    }
     .grid {
         display: grid;
         grid-template-columns: 1fr 1fr 1fr 1fr;
