@@ -113,6 +113,25 @@ section {
     background-color: rgb(225, 220, 201);
 }
 
+/* ---------------------------------Education---------------------------------- */
+
+#holder {
+    overflow: none;
+}
+
+#one, #two, #three, #four {
+    display: inline-block;
+    background-color: #eee;
+    width: 300px;
+    height: 300px;
+    margin: 5px;
+    overflow: hidden;
+    overflow-y: scroll;
+}
+
+
+/* ------------------------------------ Skills------------------------------ */
+
 .flex-container {
     display: flex;
     flex-wrap: wrap;
@@ -146,7 +165,7 @@ section {
 }
 
 .flex-item-html {
-    background-color: rgb(40, 94, 66);
+    background-color: rgb(65, 163, 112);
     padding: 10px;
     flex: 50%;
 }
@@ -156,6 +175,7 @@ section {
 .graph {
     margin-bottom: 1em;
     font: normal 100%/150% arial, helvetica, sans-serif;
+    margin: auto;
 }
 
 .graph tbody th {
@@ -240,7 +260,6 @@ section {
             text-align: center;
             white-space: nowrap;
             text-indent: 0;
-            transform: rotate(-45deg);
         }
 
         .graph tbody th:after {
@@ -403,7 +422,38 @@ footer {
     .flex-item-html {
         flex: 100%;
     }
+
+    /* -----------------------------------------------Bar Graph----------------------------------------- */
+
+    .graph {
+        margin-bottom: 1em;
+        font: normal 100%/150% arial, helvetica, sans-serif;
+        margin: auto;
+    }
+
+    .graph tbody th {
+        text-align: right;
+    }
+
+    @supports (display:grid) {
+
+        @media (min-width:32em) {
+
+            .graph {
+                display: block;
+                width: 300px;
+                height: 300px;
+            }
+
+            .graph td {
+                width: 60%;
+            }
+
+        }
+
+    }
 }
+
 
 /*---------------------------Tablet Size MediaQuery-----------------------------------------------------------------------*/
 
