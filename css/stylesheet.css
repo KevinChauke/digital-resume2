@@ -152,7 +152,7 @@ section {
     flex: 50%;
 }
 
-.flex-item-css {
+.flex-item-c {
     background-color: #d45353;
     padding: 10px;
     flex: 50%;
@@ -433,6 +433,7 @@ footer {
 
     .graph tbody th {
         text-align: right;
+        transform:rotate(-45deg);
     }
 
     @supports (display:grid) {
@@ -453,6 +454,13 @@ footer {
 
     }
 }
+@media only screen and (max-width: 511px) {
+    .graph tbody th {
+        text-align: right;
+        transform:rotate(0deg);
+    }
+    }
+    
 
 
 /*---------------------------Tablet Size MediaQuery-----------------------------------------------------------------------*/
