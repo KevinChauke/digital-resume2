@@ -485,7 +485,7 @@ footer {
 
 @media only screen and (min-width: 1025px) {
     #banner{
-        height: 84vh;
+        height: 125vh;
     }
     .grid {
         display: grid;
