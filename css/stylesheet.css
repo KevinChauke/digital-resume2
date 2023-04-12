@@ -117,6 +117,7 @@ section {
 
 #holder {
     overflow: none;
+    text-align: justify;
 }
 
 #one, #two, #three, #four {
